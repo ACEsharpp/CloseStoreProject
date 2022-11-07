@@ -1,9 +1,6 @@
 from pydantic import BaseModel
 
 
-from pydantic import BaseModel
-
-
 class Customer(BaseModel):
     user_id: int
     role: str
