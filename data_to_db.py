@@ -13,7 +13,7 @@ class product:
 
 host = 'localhost'
 user = 'postgres'
-password = 'adil26072003'
+password = 'imoshkuanysh'
 database = "postgres"
 
 
