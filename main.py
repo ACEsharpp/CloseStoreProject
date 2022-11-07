@@ -323,3 +323,91 @@ def favoritesPage():
         return render_template("favorites.html", user=user, customer=True, result=user_favorites)
     return redirect('/')
 
+@app.route('/card')
+def cardPage():
+    if db.info.get('username') is None:
+        return redirect('/login')
+    user = crud.get_customer(db, db.info.get('username'))
+    if user.role == 'customer':
+        user_card = crud.get_customer_card(db, user.user_id)
+        total = 0
+        for product in user_card:
+            total+=product.price
+        return render_template("card.html", user=user, customer=True, result=user_card, price=total)
+    return redirect('/')
+
+
+@app.route('/search', methods=['GET'])
+def searchPage():
+    name = request.args.get('search').upper().strip()
+    products = crud.searchProduct(db, name)
+    customer = False
+    user = None
+    if db.info.get('username') is not None:
+        user = crud.get_customer(db, db.info.get('username'))
+        if user.role == 'customer':
+            customer = True
+    return render_template("search.html", search=name, result=products[:28], user=user, customer=customer)
+
+
+@app.route('/login')
+def loginPage():
+    if db.info.get('username') is None:
+        return render_template("login.html")
+    return redirect('/logout')
+
+
+@app.route('/register')
+def registerPage():
+    if db.info.get('username') is None:
+        return render_template("register.html")
+    return redirect('/logout')
+
+
+@app.route('/confirm-registration')
+def confirmPage():
+    if db.info.get('user') is None:
+        return redirect('/login')
+    code = random.randint(1000, 9999)
+    user = db.info['user']
+    db.info['code'] = code
+    post_email.send(to_address=user.username, subject="The confirmation code",
+                    text="Your confirmation code is " + str(code))
+    return render_template("confirm.html", email=user.username)
+
+
+@app.route('/logout')
+def logoutPage():
+    if db.info.get('username') is not None:
+        user = crud.get_customer(db, db.info.get('username'))
+        return render_template("leave.html", user=user)
+    return redirect('/')
+
+
+@app.route("/add-product")
+def addProductPage():
+    if db.info.get('username') is None:
+        return redirect('/login')
+    return render_template('new-product.html')
+
+
+@app.route('/profile', methods=['GET', 'POST'])
+def profilePage():
+    if db.info.get('username') is not None:
+        user = crud.get_customer(db, db.info.get('username'))
+        if user.role == 'customer':
+            return render_template("customer-personal.html", user=user,
+                                   address="Your address" if user.address is None else user.address)
+        else:
+            products = crud.get_products_of_seller(db, user.user_id)
+            return render_template("seller-personal.html", user=user, products=products)
+    return redirect('/')
+
+
+@app.route('/recover-password')
+def recoverPage():
+    return render_template("recover.html")
+
+
+if __name__ == '__main__':
+    uvicorn.run(fastApi)
