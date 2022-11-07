@@ -5,7 +5,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 
 def send(to_address, subject, text):
-    from_add = 'kamow2014@mail.ru'
+    from_add = 'i_kuanysh@inbox.ru'
     to_add = to_address
     subject = subject
     text = text
@@ -21,6 +21,6 @@ def send(to_address, subject, text):
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login(from_add,'3bmXkubL93yjGvDifYDP')
+    server.login(from_add,'ps1GBgykmpCRL6gbzMwE')
     server.send_message(msg, from_addr=from_add, to_addrs=[to_add])
     server.quit()
