@@ -1,0 +1,360 @@
+{
+  "Футболки":{
+    "1":{
+      "name":"URBAN MULTI GRAPHIC TEE",
+      "color":"black",
+      "price":"20000",
+      "type":"The basic half-sleeve T-shirt",
+      "photo":"https://media.frgroup.kz/images/d5/01/559e1adff28a926bb81d282b47c3.jpg"
+    },
+    "2":{
+      "name":"FLAG ARCH TEE",
+      "color":"orange",
+      "price":"15000",
+      "type":"The basic half-sleeve T-shirt",
+      "photo":"https://media.frgroup.kz/images/fd/87/9a9d39f4e07bc9b058972eacd665.jpg"
+    },
+    "3":{
+      "name":"REGULAR",
+      "color":"dark blue",
+      "price":"31256",
+      "type":"polo",
+      "photo":"https://media.frgroup.kz/images/64/b8/ec8662d56631febea207f64ecc67.jpg"
+    },
+    "4":{
+      "name":"COTTON COMFORT FIT",
+      "color":"white",
+      "price":"23442",
+      "type":"The ringer T-shirt",
+      "photo":"https://media.frgroup.kz/images/92/d4/f1da2aba070728cdeb29d5628fce.jpg"
+    },
+    "5":{
+      "name":"Pjt Rock BA SL Hdy",
+      "color":"black",
+      "price":"29900",
+      "type":"The singlet T-shirt",
+      "photo":"https://media.frgroup.kz/images/b4/6d/570f2f71b7e17048106a13174677.jpg"
+    },
+    "6":{
+      "name":"LOGO JACQUARD TEE",
+      "color":"white",
+      "price":"53134",
+      "type":"The muscle T-shirt",
+      "photo":"https://media.frgroup.kz/images/e9/60/b4b40815326fb7af8a62414f8e63.jpg"
+    },
+    "7":{
+      "name":"T-WASH-E1 T-SHIRT",
+      "color":"turquoise",
+      "price":"23412",
+      "type":"Oversize T-Shirt",
+      "photo":"https://media.frgroup.kz/images/86/5f/e469bfc4bb06bc79a4a697f7aed0.jpg"
+    },
+    "8":{
+      "name":"ZIP DRESS CASUAL SLIM LS POLO",
+      "color":"black",
+      "price":"65633",
+      "type":"Long Sleeve Polo Shirt",
+      "photo":"https://media.frgroup.kz/images/66/3f/42ccc88193d8be68001194413fb3.jpg"
+    },
+    "9":{
+      "name":"UA Rush Emboss SS-GRY",
+      "color":"olive color",
+      "price":"34234",
+      "type":"The rashguard T-shirt",
+      "photo":"https://media.frgroup.kz/images/55/03/94b27ec7a24edc568e2444b2dce9.jpg"
+    },
+    "10":{
+      "name":"ELEVATED LOGO TAPE POLO",
+      "color":"black",
+      "price":"32443",
+      "type":"The polo",
+      "photo":"https://media.frgroup.kz/images/3c/92/a0ccaa1778ed78d869f9659ef8be.jpg"
+    },
+    "11":{
+      "name":"UA LOGO EMB HEAVYWEIGHT",
+      "color":"grey",
+      "price":"12332",
+      "type":"The oversize T-shirt",
+      "photo":"https://media.frgroup.kz/images/37/c5/83336e02ab9f83943d9c8f8352cc.jpg"
+    },
+    "12":{
+      "name":"ELEVATED LOGO TAPE T-SHIRT",
+      "color":"white",
+      "price":"32432",
+      "type":"The muscle T-shirt",
+      "photo":"https://media.frgroup.kz/images/ed/27/1da82e654ca8bee2113f977701ef.jpg"
+    },
+    "13":{
+      "name":"ASOS DESIGN knitted",
+      "color":"black",
+      "price":"43222",
+      "type":"The turtle-neck T-shirt",
+      "photo":"https://images.asos-media.com/products/asos-design-knitted-muscle-fit-turtleneck-t-shirt-in-black/10886678-1-black?$n_640w$&wid=513&fit=constrain"
+    },
+    "14":{
+      "name":"Rick Owens x Champion Tommy logo T-shirt",
+      "color":"white",
+      "price":"75765",
+      "type":"The long T-shirt",
+      "photo":"https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/97/P00571381.jpg"
+    },
+    "15":{
+      "name":"RRL Henley",
+      "color":"brown",
+      "price":"43452",
+      "type":"The Henley-collar T-shirt",
+      "photo":"https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/5f/P00549190.jpg"
+    }
+  },
+  "Кофты":{
+    "1":{
+      "name":"RWB BLOCK PLACEMENT",
+      "color":"grey",
+      "price":"43245",
+      "type":"Zip Up Hoodie",
+      "photo":"https://media.frgroup.kz/images/42/0e/abee8c82033fef09ab2a04f5c544.jpg"
+    },
+    "2":{
+      "name":"MULTI HTR",
+      "color":"blue",
+      "price":"43221",
+      "type":"The wool jumper",
+      "photo":"https://media.frgroup.kz/images/97/24/26f2d78ff9f51b300b7d47e7092c.jpg"
+    },
+    "3":{
+      "name":"PIMA ORG CTN CASHMERE",
+      "color":"dark blue",
+      "price":"67655",
+      "type":"The golf jacket",
+      "photo":"https://media.frgroup.kz/images/74/4f/2d20b60983abe9dcddd3fbfda613.jpg"
+    },
+    "4":{
+      "name":"SUPERIOR WOOL QUARTER ZIP",
+      "color":"brown",
+      "price":"43532",
+      "type":"The Sweater",
+      "photo":"https://cdn-irec.r-99.com/sites/default/files/imagecache/300o/product-images/1168682/VcIDLfuviR9FXzp28f2OQA.jpg"
+    },
+    "5":{
+      "name":"HILFIGER STRUCTURE FLAG CREW",
+      "color":"red",
+      "price":"76553",
+      "type":"The Sweater",
+      "photo":"https://media.frgroup.kz/images/16/30/25c8b2a7337638e32b85c93eca05.jpg"
+    },
+    "6":{
+      "name":"S-NORIS-JAC",
+      "color":"white",
+      "price":"12343",
+      "type":"The sweatshirt",
+      "photo":"https://media.frgroup.kz/images/32/91/cf21ebf5f4a3e671b533200584c9.jpg"
+    },
+    "7":{
+      "name":"ABSTRACT GRAPHIC SWEATER",
+      "color":"black-white",
+      "price":"120020",
+      "type":"The sweatshirt",
+      "photo":"https://media.frgroup.kz/images/b2/4f/a0dcc6d42e196066564c6007a77e.jpg"
+    },
+    "8":{
+      "name":"BOLD MONOGRAM CREW NECK",
+      "color":"red",
+      "price":"32212",
+      "type":"The sweatshirt",
+      "photo":"https://media.frgroup.kz/images/d6/4a/5486f3c03e0c6fe6967ba59139a6.jpg"
+    },
+    "9":{
+      "name":"EMBROIDERED",
+      "color":"grey",
+      "price":"32154",
+      "type":"The pullover",
+      "photo":"https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/29/P00582478.jpg"
+    },
+    "10":{
+      "name":"K-AIRO KNITWEAR",
+      "color":"coloured",
+      "price":"43244",
+      "type":"The Sweater",
+      "photo":"https://media.frgroup.kz/images/10/63/cd14de5615592cb1fcd47b814806.jpg"
+    },
+    "11":{
+      "name":"RWB BLOCK PLACEMENT CREW",
+      "color":"red",
+      "price":"65456",
+      "type":"The Sweater",
+      "photo":"https://media.frgroup.kz/images/ec/19/3fba6c901d7aa05ea2e9d45e3747.jpg"
+    },
+    "12":{
+      "name":"MONOGRAM WOOL STRIPE CREW NECK",
+      "color":"dark-blue",
+      "price":"64456",
+      "type":"The pullover",
+      "photo":"https://media.frgroup.kz/images/7c/96/3e8b44a47ad25ac8c11078e96c30.jpg"
+    },
+    "13":{
+      "name":"Nike slim dry-fit",
+      "color":"brown",
+      "price":"54566",
+      "type":"The sportwear longsleeve",
+      "photo":"https://a.lmcdn.ru/img600x866/R/T/RTLAAZ470501_16037096_1_v1_2x.jpg"
+    },
+    "14":{
+      "name":"Chicago 23",
+      "color":"black",
+      "price":"43553",
+      "type":"The hoodie",
+      "photo":"https://cdn-irec.r-99.com/sites/default/files/imagecache/300o/product-images/1168682/VcIDLfuviR9FXzp28f2OQA.jpg"
+    },
+    "15":{
+      "name":"JOHN ELLIOTT Hooded Villain",
+      "color":"black",
+      "price":"55555",
+      "type":"Slim Fit Hoodies",
+      "photo":"https://is4.fwrdassets.com/images/p/fw/z/JOHF-MO6_V1.jpg"
+    }
+  },
+  "Джинсы":{
+    "1":{
+      "name":"Sergio jeans",
+      "color":"blue",
+      "price":"13000",
+      "type":"standard cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Y0628AZ_22AU_NM34_01_02.jpg"
+    },
+"2":{
+      "name":"Pedro jeans",
+      "color":"dark",
+      "price":"13000",
+      "type":"fitted cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Y0397AZ_22AU_NM40_01_02.jpg"
+    },
+"3":{
+      "name":"Skinny jeans",
+      "color":"dark",
+      "price":"17000",
+      "type":"comfortable cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Z1361AZ_22AU_NM40_01_02.jpg"
+    },
+"4":{
+      "name":"Skinny jeans",
+      "color":"sky blue",
+      "price":"17000",
+      "type":"comfortable cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Z1525AZ_22AU_NM29_01_01.jpg"
+    },
+"5":{
+      "name":"Jeans",
+      "color":"blue",
+      "price":"15000",
+      "type":"free cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Z5638AZ_22AU_NM34_01_01.jpg"
+    },
+"6":{
+      "name":"Jeans",
+      "color":"sky blue",
+      "price":"15000",
+      "type":"Fitted silhouette of the 90s",
+      "photo":"https://dfcdn.defacto.com.tr/7/Y5173AZ_22WN_NM39_01_02.jpg"
+    },
+"7":{
+      "name":"Skinny Jeans",
+      "color":"dark blue",
+      "price":"17000",
+      "type":"comfortable cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Z1526AZ_22AU_NM28_01_01.jpg"
+    },
+"8":{
+      "name":"Jeans",
+      "color":"sky blue",
+      "price":"17000",
+      "type":"Fitted jeans",
+      "photo":"https://dfcdn.defacto.com.tr/7/Z1528AZ_22AU_NM39_01_02.jpg"
+    },
+"9":{
+      "name":"Jeans",
+      "color":"sky blue",
+      "price":"15000",
+      "type":"Bananas cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Z2639AZ_22AU_NM39_01_01.jpg"
+    },
+"10":{
+      "name":"Jeans",
+      "color":"black",
+      "price":"15000",
+      "type":"standard narrowed cut",
+      "photo":"https://dfcdn.defacto.com.tr/7/Y8823AZ_22AU_NM39_01_02.jpg"
+    }
+  },
+  "Шорты":{
+  "1":{
+      "name":"UNIQLO",
+      "color":"blue",
+      "price":"10000",
+      "type":"AIRism Cotton Shorts",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLABW784301_17833518_1_v3_2x.jpg"
+    },
+"2":{
+      "name":"UNIQLO",
+      "color":"gray",
+      "price":"10000",
+      "type":"AIRism Cotton Shorts",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLABW772501_17845345_1_v1_2x.jpg"
+    },
+"3":{
+      "name":"United Colors of Benetton",
+      "color":"blue",
+      "price":"16200",
+      "type":"Cotton Shorts",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLACA256701_18086256_1_v3_2x.jpg"
+    },
+"4":{
+      "name":"UNIQLO",
+      "color":"beige",
+      "price":"16000",
+      "type":"Ultra-elastic sports shorts",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLACC763901_18431535_1_v1_2x.jpg"
+    },
+"5":{
+      "name":"Under Armour",
+      "color":"black",
+      "price":"21760",
+      "type":"Sports shorts UA TECH GRAPHICS",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLAAA058903_18191873_1_v1_2x.jpg"
+    },
+"6":{
+      "name":"Quiksilver",
+      "color":"gray",
+      "price":"41000",
+      "type":"Shorts",
+      "photo":"https://a.lmcdn.ru/product/Q/U/QU192EMAKKA5_6077620_1_v2.jpg"
+    },
+"7":{
+      "name":"adidas Originals",
+      "color":"khaki",
+      "price":"24800",
+      "type":"Sports shorts CAMO AOP SHORT",
+      "photo":"https://a.lmcdn.ru/product/A/D/AD093EMLWYM5_13060247_1_v1_2x.jpg"
+    },
+"8":{
+      "name":"UNIQLO",
+      "color":"dark gray",
+      "price":"10000",
+      "type":"AIRism Cotton Shorts",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLABW784401_17844711_1_v1_2x.jpg"
+    },
+"9":{
+      "name":"Helly Hansen",
+      "color":"black",
+      "price":"37200",
+      "type":"Sports shorts MOVE SWEAT SHORTS",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLABI338101_16786263_1_v1_2x.jpg"
+    },
+"10":{
+      "name":"Nike",
+      "color":"blue",
+      "price":"18700",
+      "type":"Sports shorts M NK CHILLER SHORT 7 IN BF NFS",
+      "photo":"https://a.lmcdn.ru/product/R/T/RTLABX777702_18017961_1_v2_2x.jpg"
+    }
+  }
+}
