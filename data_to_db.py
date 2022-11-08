@@ -16,9 +16,10 @@ user = 'postgres'
 password = 'imoshkuanysh'
 database = "postgres"
 
-
 uri = 'postgresql://' + user + ':' + password + '@' + host + "/" + database
 
+connection = psycopg2.connect(uri)
+cursor = connection.cursor()
 
 with open("data/clothes.json", encoding='UTF-8') as f:
     clothes = json.load(f)
