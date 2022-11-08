@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud 9 - {{ product.name }}</title>
+    <link rel="icon" type="image/x-icon" href="/static/icon.ico">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Gugi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="name">
+        <a href="/"><img src="/static/name_black.png" alt="photo"></a>
+    </div>
+    <div class="menu">
+        <div class="search-bar">
+            <form action="/cloud9/search" method="get">
+                <label>
+                    <input type="text" name="search" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search" style="font-size: 18px;"></i></button>
+                </label>
+            </form>
+        </div>
+        <div class="navbar-links">
+            {% if user%}
+            <a class="navbar-link" href="/profile">PROFILE</a>
+            {% if customer %}
+            <a class="navbar-link" href="/favorites">FAVORITES</a>
+            <a class="navbar-link" href="/card">CARD</a>
+            {% endif %}
+            <a class="navbar-link" href="/logout">LOG OUT</a>
+            {% else %}
+            <a class="navbar-link" href="/login">LOG IN</a>
+            <a class="navbar-link" href="/register">REGISTER</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="categories">
+    <div class="black-bar">
+        <a class="black-bar-link" href="/cloud9/search?search=T-SHIRT">T-SHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SWEATSHIRT">SWEATSHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=JEANS">JEANS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHORTS">SHORTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SNEAKERS">SNEAKERS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHOES">SHOES</a>
+    </div>
+</div>
+{% if product %}
+<div class="product-content">
+    <div class="card"  style='background: url("{{ product.photo }}") no-repeat center; background-size: 300px;'>
+
+    </div>
+    <div class="product-info">
+        <div class="info-field">
+            <h4 class="field">Name:</h4> <h4> {{ product.name }}</h4>
+        </div>
+        <div class="info-field">
+            <h4 class="field">Color:</h4> <h4> {{ product.color }}</h4>
+        </div>
+        <div class="info-field">
+            <h4 class="field">Type:</h4> <h4> {{ product.type }}</h4>
+        </div>
+        <div class="info-field">
+            <h4 class="field">Model:</h4> <h4> {{ product.model }}</h4>
+        </div>
+        {% if product.country %}
+        <div class="info-field">
+            <h4 class="field">Country:</h4> <h4> {{ product.country }}</h4>
+        </div>
+        {% endif %}
+        <div class="info-field">
+            <h4 class="field">Price:</h4> <h4> {{ product.price }}</h4>
+        </div>
+        <div class="info-buttons">
+            {% if customer %}
+            <div class="info-field">
+                {% if user_card_product %}
+                <form action="/remove-from-card" method="post">
+                    <input type="hidden" name='id' value="{{ product.product_id }}">
+                    <input type="submit" value="REMOVE FROM CARD">
+                </form>
+                {% else %}
+                <form action="/add-to-card" method="post">
+                    <input type="hidden" name='id' value="{{ product.product_id }}">
+                    <input type="submit" value="ORDER">
+                </form>
+                {% endif %}
+            </div>
+            <div class="info-field" style="margin-left: 4%;">
+                {% if user_favs_product %}
+                <form action="/remove-from-favs" method="post">
+                    <input type="hidden" name='id' value="{{ product.product_id }}">
+                    <input type="submit" value="REMOVE FROM FAVORITES">
+                </form>
+                {% else %}
+                <form action="/add-to-favs" method="post">
+                    <input type="hidden" name='id' value="{{ product.product_id }}">
+                    <input type="submit" value="ADD TO FAVORITES">
+                </form>
+                {% endif %}
+            </div>
+            {% else %}
+            <div class="info-field">
+                <form action="/remove-product" method="post">
+                    <input type="hidden" name='id' value="{{ product.product_id }}">
+                    <input type="submit" value="DELETE PRODUCT">
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="login">
+    <h2>The product doesn't exist!</h2>
+    <div class="form-submit" style="margin-top: 2%">
+      <a href="/"><input type="button" value="BACK"></a>
+    </div>
+</div>
+{% endif %}
+<div class="footer">
+    <div class="footer-name">
+        <a href="/"><img src="/static/name.png" alt="photo"></a>
+    </div>
+</div>
+</body>
+</html>

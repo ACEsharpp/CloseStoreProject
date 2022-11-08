@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud 9 - New product</title>
+    <link rel="icon" type="image/x-icon" href="/static/icon.ico">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Gugi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="name">
+        <a href="/"><img src="/static/name_black.png" alt="photo"></a>
+    </div>
+    <div class="menu">
+        <div class="search-bar">
+            <form action="/cloud9/search" method="get">
+                <label>
+                    <input type="text" name="search" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search" style="font-size: 18px;"></i></button>
+                </label>
+            </form>
+        </div>
+        <div class="navbar-links">
+            <a class="navbar-link" href="/profile">PROFILE</a>
+            <a class="navbar-link" href="/logout">LOG OUT</a>
+        </div>
+    </div>
+</div>
+<div class="categories">
+    <div class="black-bar">
+        <a class="black-bar-link" href="/cloud9/search?search=T-SHIRT">T-SHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SWEATSHIRT">SWEATSHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=JEANS">JEANS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHORTS">SHORTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SNEAKERS">SNEAKERS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHOES">SHOES</a>
+    </div>
+</div>
+<div class="product">
+    <h2>NEW PRODUCT</h2>
+    <form class="product-form" id="product-photo" action="/add-product" method="post" enctype="multipart/form-data">
+        <div class="product-data">
+            <div class="data">
+                <input class="account-field" type="hidden" name="photo_url" id="photo_url">
+                <label class="account-label" for="name" style="margin-top: 2%">Product name</label>
+                <input class="account-field" type="text" name="name" id="name" placeholder="Product name" required>
+                <label class="account-label" for="price" style="margin-top: 2%">Price</label>
+                <input class="account-field" type="number" name="price" id="price" placeholder="Price" required>
+                <label class="account-label" for="color" style="margin-top: 2%">Color</label>
+                <input class="account-field" type="text" name="color" id="color" placeholder="Color" required>
+                <label class="account-label" for="type" style="margin-top: 2%">Type</label>
+                <input class="account-field" type="text" name="type" id="type" placeholder="Type" required>
+                <label class="account-label" for="model" style="margin-top: 2%">Model</label>
+                <input class="account-field" type="text" name="model" id="model" placeholder="Model" required>
+                <label class="account-label" for="country" style="margin-top: 2%">Country</label>
+                <input class="account-field" type="text" name="country" id="country" placeholder="Country">
+            </div>
+            <div class="photo">
+                <label class="account-label" for="url-photo" style="margin-top: 2%">Photo from url</label>
+                <div class="image-upload">
+                    <input class="account-field" type="text" name="photo" id="url-photo" placeholder="URL">
+                    <input class="file-upload-button" type="button" value="UPLOAD" onclick="getImage()">
+                </div>
+                <p class="warning" id="image-warning"></p>
+                <img src="" id="image-display" alt="" style="width: 150px; margin-top: 3%;">
+            </div>
+        </div>
+        <p class="warning" id="warning">{{ warning }}</p>
+        <p class="success" id="success">{{ success }}</p>
+        <div class="account-submit">
+            <input type="submit" value="ADD" style="width: 10%">
+            <a href="/cloud9/profile"><input type="button" value="BACK" style="width: 10%"></a>
+        </div>
+    </form>
+</div>
+<div class="footer">
+    <div class="footer-name">
+        <a href="/"><img src="/static/name.png" alt="photo"></a>
+    </div>
+</div>
+</body>
+<script>
+    function getImage(){
+        let url = document.getElementById("url-photo").value
+        var image_display = document.getElementById("image-display")
+        image_display.src = url
+        let url_data = document.getElementById("photo_url")
+        url_data.value = url
+    }
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud 9 - {{ user.username }}</title>
+    <link rel="icon" type="image/x-icon" href="/static/icon.ico">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Gugi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="name">
+        <a href="/"><img src="/static/name_black.png" alt="photo"></a>
+    </div>
+    <div class="menu">
+        <div class="search-bar">
+            <form action="/cloud9/search" method="get">
+                <label>
+                    <input type="text" name="search" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search" style="font-size: 18px;"></i></button>
+                </label>
+            </form>
+        </div>
+        <div class="navbar-links">
+            <a class="navbar-link" href="/profile">PROFILE</a>
+            <a class="navbar-link" href="/logout">LOG OUT</a>
+        </div>
+    </div>
+</div>
+<div class="categories">
+    <div class="black-bar">
+        <a class="black-bar-link" href="/cloud9/search?search=T-SHIRT">T-SHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SWEATSHIRT">SWEATSHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=JEANS">JEANS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHORTS">SHORTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SNEAKERS">SNEAKERS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHOES">SHOES</a>
+    </div>
+</div>
+<div class="account">
+    <h2>MY ACCOUNT</h2>
+    <div class="forms">
+        <form class="credentials" action="/update-user" method="post">
+            <label class="account-label" for="login">Email</label>
+            <input class="account-field" type="text" name="login" id="login" value="{{ user.username }}" readonly required>
+            <label class="account-label" for="expassword" style="margin-top: 2%">Your password</label>
+            <input class="account-field" type="password" name="expassword" id="expassword" placeholder="Your password" required>
+            <label class="account-label" for="password" style="margin-top: 2%">New password</label>
+            <input class="account-field" type="password" name="password" id="password" placeholder="New password" required>
+            <label class="account-label" for="spassword" style="margin-top: 2%">Confirm password</label>
+            <input class="account-field" type="password" name="spassword" id="spassword" placeholder="Confirm password" required>
+            <p class="warning" id="warning">{{ warning }}</p>
+            <p class="success" id="success">{{ success }}</p>
+            <div class="account-submit">
+                <input type="submit" value="SAVE">
+                <a href="/add-product"><input type="button" value="ADD NEW PRODUCT" style="width: 30%"></a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="own-products">
+    <h2>MY PRODUCTS</h2>
+    <div class="grid-container">
+        {% for product in products %}
+        <a href="/cloud9/shop/{{ product.product_id }}">
+            <div class="card"  style='background: url("{{ product.photo }}") no-repeat center; background-size: 300px;'>
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+<div class="footer" style="margin-top: 5%">
+    <div class="footer-name">
+        <a href="/"><img src="/static/name.png" alt="photo"></a>
+    </div>
+</div>
+</body>
+</html>

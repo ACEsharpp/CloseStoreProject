@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud 9 - register</title>
+    <link rel="icon" type="image/x-icon" href="/static/icon.ico">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Gugi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="name">
+        <a href="/"><img src="/static/name_black.png" alt="photo"></a>
+    </div>
+    <div class="menu">
+        <div class="search-bar">
+            <form action="/cloud9/search" method="get">
+                <label>
+                    <input type="text" name="search" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search" style="font-size: 18px;"></i></button>
+                </label>
+            </form>
+        </div>
+        <div class="navbar-links">
+            {% if user%}
+            <a class="navbar-link" href="/profile">PROFILE</a>
+            <a class="navbar-link" href="/favorites">FAVORITES</a>
+            <a class="navbar-link" href="/card">CARD</a>
+            {% else %}
+            <a class="navbar-link" href="/login">LOG IN</a>
+            <a class="navbar-link" href="/register">REGISTER</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="categories">
+    <div class="black-bar">
+        <a class="black-bar-link" href="/cloud9/search?search=T-SHIRT">T-SHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SWEATSHIRT">SWEATSHIRTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=JEANS">JEANS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHORTS">SHORTS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SNEAKERS">SNEAKERS</a>
+        <a class="black-bar-link" href="/cloud9/search?search=SHOES">SHOES</a>
+    </div>
+</div>
+<div class="login">
+    <form action="/register" method="post">
+        <h2>REGISTER</h2>
+        <label class="form-label" for="login">Email</label>
+        <input class="form-field" type="text" name="login" id="login" placeholder="Email" required>
+        <label class="form-label" for="password" style="margin-top: 2%">Password</label>
+        <input class="form-field" type="password" name="password" id="password" placeholder="Password" required>
+        <label class="form-label" for="spassword" style="margin-top: 2%">Confirm password</label>
+        <input class="form-field" type="password" name="spassword" id="spassword" placeholder="Confirm password" required>
+        <div class="role">
+            <label class="form-label" for="role" style="margin-top: 2%;">I'm a seller</label>
+            <input class="form-field" type="checkbox" name="role" id="role" placeholder="Confirm password">
+        </div>
+        <p class="warning">{{ context }}</p>
+        <div class="form-submit">
+            <input type="submit" value="SIGN UP">
+        </div>
+        <div class="form-links">
+            <a href="/login">ALREADY REGISTERED?</a>
+        </div>
+    </form>
+</div>
+<div class="footer">
+    <div class="footer-name">
+        <a href="/"><img src="/static/name.png" alt="photo"></a>
+    </div>
+</div>
+</body>
+</html>
